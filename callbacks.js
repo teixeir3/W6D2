@@ -85,6 +85,9 @@ var performSortPass = function(arr, i, madeSwaps, callback){
 
   } else if (i == (arr.length-1)){
     callback(madeSwaps);
+    // don't reset madeSwaps here either;
+    // will send to completioncallback too early,
+    // or won't ever finish
   }
 }
 
